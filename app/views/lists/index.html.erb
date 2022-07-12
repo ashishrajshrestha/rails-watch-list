@@ -1,0 +1,21 @@
+<%# <h1>This is List Index Page</h1> %>
+
+<style>
+  .main-header {
+  text-align: center;
+}
+</style>
+
+<header class="main-header" role="banner">
+  <img src="./assets/banner.jpg" alt="Banner Image"/>
+</header>
+<div class="container">
+  <h1 class="text-center my-5">Watch lists</h1>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </div>
+  <br>
+  <%= link_to "+ Add a new list", new_list_path %>
+ </div>

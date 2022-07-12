@@ -1,1 +1,7 @@
-<h1>This is show list page</h1>
+<h1><%= @list.name %></h1>
+
+
+<br>
+<%= link_to "Delete", list_path(@list),method: 'delete', data: { confirm: 'Are you sure?'} %>
+<br>
+<%= link_to "Back to the list", lists_path %>
